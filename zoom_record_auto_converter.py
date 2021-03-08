@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument(
     "--record-path",
     required=True,
-    help="Recording path(Location of the .zoom file)"
+    help="Example: C:\\Users\\p0x0q\\Documents\\Zoom(Location folder of the .zoom file)"
 )
 parser.add_argument(
     "--check-process-time",
@@ -22,7 +22,7 @@ parser.add_argument(
 parser.add_argument(
     "--convert-path",
     required=True,
-    help=r"Example: C:\Users\p0x0q\AppData\Roaming\Zoom\bin\zTscoder.exe (Location of the zTscoder.exe file)"
+    help="Example: C:\\Users\\p0x0q\\AppData\\Roaming\\Zoom\\bin\\zTscoder.exe (Location file of the zTscoder.exe file)"
 )
 
 args = parser.parse_args()
