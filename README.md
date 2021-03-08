@@ -1,5 +1,7 @@
 # zoom_record_auto_converter
 
+.zoomファイルが存在するフォルダーと，Zoomインストール時に同梱されるzTscoder.exeを指定して，全ての.zoomファイルを動画ファイルに変換するPythonスクリプトです．
+
 optional arguments:
 
   -h, --help            show this help message and exit
