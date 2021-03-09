@@ -27,19 +27,16 @@ parser.add_argument(
 
 args = parser.parse_args()
 
-def is_waiting():
-    cmd = 'tasklist'
-    proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
-    for line in proc.stdout:
-        if "zTscoder" in str(line):
-            return True
-    return False
+
 def waiting():
-    if is_waiting() == False:
-        return
-    else:
+    while 1:
+        cmd = 'tasklist'
+        proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
+        for line in proc.stdout:
+            if "zTscoder" in str(line):
+                return
         time.sleep(args.check_process_time)
-        waiting()
+
 
 for filepath in glob.glob(args.record_path + r"\**\*"):
     if ".zoom" in filepath:
