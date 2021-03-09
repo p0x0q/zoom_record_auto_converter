@@ -30,11 +30,14 @@ args = parser.parse_args()
 
 def waiting():
     while 1:
+        r = 0
         cmd = 'tasklist'
         proc = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         for line in proc.stdout:
             if "zTscoder" in str(line):
-                return
+                r = 1
+        if r == 0:
+            return
         time.sleep(args.check_process_time)
 
 
